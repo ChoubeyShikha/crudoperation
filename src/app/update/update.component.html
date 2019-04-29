@@ -1,0 +1,18 @@
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>EMPLOYEE DETAIL UPDATE</h2>
+    </div>
+    <div class="panel-body">
+      <form #updateForm="ngForm" (ngSubmit)="updateEmp(updateForm.value)">
+          <label>ID</label>
+          <input type="number" name="uid" [(ngModel)]="data.id" class="form-control" ngModel><br/>
+          <label>NAME</label>
+          <input type="text" name="uname" [(ngModel)]="data.name" class="form-control" ngModel><br/>
+          <label>SALARY</label>
+          <input type="number" name="usalary" [(ngModel)]="data.salary" class="form-control" ngModel><br/>
+          <input type="submit" value="Update" class="btn btn-success">
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>CRUD OPERATION for form</h2>
+      </div>
+      <div class="panel-body">
+        <input type="button" value="ADD EMPLOYEE" routerLink="add-Employee">
+        <table class="table table-bordered">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>NAME</th>
+                  <th>SALARY</th>
+                  <th>DELETE</th>
+                  <th>UPDATE</th>
+                </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let k of data">
+                <td>{{k.id}}</td>
+                <td>{{k.name}}</td>
+                <td>{{k.salary}}</td>
+                <td>
+                  <button type="button" (click)="deleteEmp(k.id)">Delete</button>
+                </td>
+                <td [routerLink]="['update', k.id]">
+                  <button type="button" >Update</button>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
